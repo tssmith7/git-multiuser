@@ -1,7 +1,7 @@
 {
   "name": "git-multiuser",
   "displayName": "Git Multiuser",
-  "description": "Use multiple user.name/user.email combinations. Useful with shared computers.",
+  "description": "git config user.name and user.email shortcut. Shared computer use of multiple user.name/user.email combinations.",
   "version": "1.0.0",
   "publisher": "tssmith7",
   "icon": "images/git-multiuser.png",

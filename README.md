@@ -1,5 +1,9 @@
 # git-multiuser README
 
+Based on git-autoconfig from shyykoserhiy.  Somewhat the opposite usage from git-autoconfig as this extension is for multiple
+users on the same computer (same log-in) to allow different commit user/emails.  The configuration is set globally so it does
+not persist with the local repository.  Multiple users share the same repository.
+
 This extension allows easy switching between user.name / user.email pairs that are configured in the --global space of
 the git environment.  This is useful in shared computer situations where a single log-in is shared with multiple programmers 
 (such as in a school setting).
