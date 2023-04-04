@@ -1,8 +1,15 @@
 {
   "name": "git-multiuser",
-  "displayName": "git-multiuser",
-  "description": "Use multiple user.name/user.email combinations",
-  "version": "0.0.1",
+  "displayName": "Git Multiuser",
+  "description": "Use multiple user.name/user.email combinations. Useful with shared computers.",
+  "version": "1.0.0",
+  "publisher": "tssmith7",
+  "icon": "images/git-multiuser.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tssmith7/git-multiuser.git"
+  },
+  "license": "0BSD",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -21,26 +28,33 @@
     "menus": {
       "scm/title": [
           {
-              "submenu": "gituser.submenu"
+              "submenu": "gituser.submenu",
+              "when": "scmProvider == git"
           }    
       ],
       "gituser.submenu": [
            {
-              "command":  "git-multiuser.setGitUser"
-          },    
+              "command":  "git-multiuser.setGitUser",
+              "group": "gmu@1",
+              "when": "scmProvider == git"
+            },    
           {
-              "command":  "git-multiuser.deleteConfig"
-          }    
+              "command":  "git-multiuser.deleteConfig",
+              "group": "gmu@2",
+              "when": "scmProvider == git"
+            }    
       ]
     },
     "commands": [
       {
           "command": "git-multiuser.setGitUser",
-          "title": "Set Git User/Email"
+          "title": "Set Git User/Email",
+          "when": "scmProvider == git"
       },
       {
           "command": "git-multiuser.deleteConfig",
-          "title": "Delete User/Email Entries"
+          "title": "Delete User/Email Entries",
+          "when": "scmProvider == git"
       }
     ],
     "configuration": {
@@ -69,7 +83,7 @@
         "git-multiuser.useNoreplyEmail": {
           "type": "boolean",
           "default": true,
-          "description": "Use only user@users.noreply.github.com type emails."
+          "description": "Automatically generate associated user@users.noreply.github.com email."
         },
         "git-multiuser.unsetUserEmailOnStartup": {
           "type": "boolean",
