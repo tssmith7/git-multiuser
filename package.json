@@ -48,12 +48,14 @@
     "commands": [
       {
           "command": "git-multiuser.setGitUser",
-          "title": "Set Git User/Email",
+          "title": "Set/Add Git User/Email",
+          "category": "git-multiuser",
           "when": "scmProvider == git"
       },
       {
           "command": "git-multiuser.deleteConfig",
           "title": "Delete User/Email Entries",
+          "category": "git-multiuser",
           "when": "scmProvider == git"
       }
     ],

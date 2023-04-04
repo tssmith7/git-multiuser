@@ -1,6 +1,6 @@
 # git-multiuser README
 
-This extension allows easy switching between user.name and user.email values that are configured in the --global space of
+This extension allows easy switching between user.name / user.email pairs that are configured in the --global space of
 the git environment.  This is useful in shared computer situations where a single log-in is shared with multiple programmers 
 (such as in a school setting).
 
@@ -8,7 +8,10 @@ the git environment.  This is useful in shared computer situations where a singl
 
 * Automatically unsets user.name and user.email on VSCode startup (can be disabled).
 * User can select from previously used user.name / user.email combinations.
-* Optionally generates noreply email based on user.name.
+* Optionally generates noreply email based on user.name
+
+### Menu Items
+* Adds a `Git User` submenu to the Source Control ellipsis menu for quick access to commands.
 
 ## Extension Settings
 
